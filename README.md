@@ -12,14 +12,14 @@
         屏幕分辨率随机
         elements大小随机
         ```
-        - #### 效果
+        - ### 效果
             ![screenshot](screenshot.png)
             - 测试网站 
                 - https://gongjux.com/fingerprint/
-        - #### 源码
+        - ### 源码
             - 修改的源代码在finger_change_code文件夹下
             - 修改的代码上面有`// add `的注释
-        - #### 安装包
+        - ### 安装包
             - Win版本
                 - http://www.dtasecurity.cn:20080/chrome.win.7z
                 - 安装方法：
@@ -41,6 +41,9 @@
         ```
         - ### 原理简介
             - 对chromium源码中全局对象定义进行修改/添加，使得全局对象变得可以覆盖，从而使用JS的代理器对全局对象进行监控
+        - ### 源码
+            - 修改的源代码在monitor_change_code文件夹下
+            - 修改的代码上面有`// add `和`// change `的注释
         - ### 使用方法
             - 在浏览器控制台中执行proxy.js的代码(推荐在JS最先执行的时机断点（事件侦听器断点->脚本->脚本的第一条语句）然后运行js代码，最先取得全局对象的控制权)
             - 然后在网页上正常操作即可在控制台得到打印的对象信息，进行环境监控，辅助JS补环境
@@ -51,6 +54,9 @@
             ![screenshot](screenshot2.jpg)
             - 成功监控对象
             ![screenshot](screenshot3.jpg)
+        - ### 安装包
+            - Win版本
+                - http://www.dtasecurity.cn:20080/chrome.win.7z
         - ### Tips
             - 碰到不需要打印的信息可以在proxy.js中修改代码进行过滤
 
